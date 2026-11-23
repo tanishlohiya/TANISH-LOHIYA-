@@ -1,0 +1,105 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation bar */
+.navbar {
+    background: #17212d;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Desktop menu */
+nav {
+    display: flex;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #2196f3;
+}
+
+/* Hamburger button */
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Main content */
+.content {
+    padding: 40px;
+}
+
+.content h1 {
+    margin-bottom: 15px;
+}
+
+.content p {
+    font-size: 18px;
+}
+
+/* Mobile responsive design */
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        padding: 15px 20px;
+    }
+
+    /* Show hamburger */
+    .menu-btn {
+        display: block;
+    }
+
+    /* Hide menu by default */
+    nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    /* Show menu when open class is added */
+    nav.open {
+        display: flex;
+    }
+
+    nav a {
+        padding: 18px;
+        border-bottom: 1px solid #333;
+    }
+
+    .content {
+        padding: 30px 20px;
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+}

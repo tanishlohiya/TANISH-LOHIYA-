@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <div class="profile-card">
+        <div class="banner"></div>
+
+        <div class="avatar">AK</div>
+
+        <div class="profile-content">
+            <h2>Arjun Kumar</h2>
+            <p class="role">Web Developer</p>
+
+            <ul class="skills">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Git</li>
+            </ul>
+
+            <p class="followers">
+                <span id="count">120</span> followers
+            </p>
+
+            <button id="followBtn">Follow</button>
+        </div>
+    </div>
+
+    <script>
+        const followBtn = document.getElementById("followBtn");
+        const count = document.getElementById("count");
+
+        let isFollowing = false;
+
+        followBtn.addEventListener("click", function () {
+            if (isFollowing) {
+                count.textContent = 120;
+                followBtn.textContent = "Follow";
+                followBtn.classList.remove("following");
+                isFollowing = false;
+            } else {
+                count.textContent = 121;
+                followBtn.textContent = "Following";
+                followBtn.classList.add("following");
+                isFollowing = true;
+            }
+        });
+    </script>
+
+</body>
+</html>
